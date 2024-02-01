@@ -10,7 +10,7 @@
 #define PATCH_OFFSET 9245
 
 
-unsigned long GetFunctionAddress(pid_t pid)
+unsigned long GetBaseAddress(pid_t pid)
 {
     char mapsFile[256];
     snprintf(mapsFile, sizeof(mapsFile), "/proc/%d/maps", pid);
@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
     waitpid(targetPid, NULL, 0);
 
 
-    unsigned long baseAddress = GetFunctionAddress(targetPid);
+    unsigned long baseAddress = GetBaseAddress(targetPid);
 
     printf("Base Address of pid %d is 0x%lx\n", targetPid, baseAddress);
 
