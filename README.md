@@ -5,4 +5,4 @@ This will probably break very quickly and shouldn't be used.
 
 # What this patch does
 
-This Patch removes the distance limit from the Backscatters minicrit by patching a JBE instruction to JO
+This Patch removes the distance limit from the Backscatters minicrit in CTFGameRules::ApplyOnDamageModifyRules() by patching a JBE instruction to JO
